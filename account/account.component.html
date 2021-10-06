@@ -1,0 +1,79 @@
+<nav class="navbar navbar-expand-lg navbar-light bg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img  src="assets/images/mybank.png"style="height:90px"class="logo"></a>
+      <!-- <button class="navbar-toggler hidden-xs" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"></a>
+          </li>
+        
+          
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+ <!-- <app-animation-demo></app-animation-demo> // animation html selecto-->
+<div class="container ">
+<div class="row indexset">
+    <div class="col-3"></div>
+    <div class="col-lg-6 col-sm-12 dset">
+   <div class="mb-4 mt-5">
+<!-- <span style="font-size:25px; text-transform:capitalize;">{{user}}</span> -->
+   </div>
+        <div class="mb-4 mt-5"> 
+          <p>Acc/No: <span>{{acno}}</span></p>
+        </div>
+        <div class="mb-4 mt-5"> 
+          <p>Login date :{{Dlogin| date:'fullDate'}}</p>
+        </div>
+
+       
+        <div class="mb-4">     
+            <p>Balance: {{accbalance}}</p>
+          </div>
+          
+
+            <div class="mb-4">  
+               
+              </div>
+              <app-deleteconfirmation (onCancel)="onCancel()" (onDelete)="onDelete($event)"[item]="deleteacno"></app-deleteconfirmation>  
+            <button type="submit" class="mb-5 depo me-4"><a href="userhome">Back</a></button>
+           
+
+            <button class="mb-5 depo me-4" (click)="deleteAtparaent()">Delete</button>
+
+
+             
+
+             
+ 
+
+    <div class="col-3"></div>
+</div>
+</div>
+</div>
+<footer class="footer">
+  <div class="contianer">
+<div class="row">
+  <div class="col-3"></div>
+  <div class="col-lg-6 col-lg-12 iconset">
+
+  <i class="fab fa-facebook fa-2x me-3"></i>
+  <i class="fab fa-twitter fa-2x me-3"></i>
+  <i class="fab fa-whatsapp fa-2x me-3"></i>
+  <i class="fas fa-print fa-2x me-3"></i>
+  <i class="fas fa-share-alt fa-2x"></i>
+  <p class="mt-2 mb-2">© 2021 union Bank Limited</p>
+  <p>Site best viewed in IE9+, Firefox 3.5+, Chrome 3+, Safari 5.0+ at 1024 x 768 pixels resolution</p>
+</div>
+  <div class="col-3"></div>
+</div>
+  </div>
+</footer>

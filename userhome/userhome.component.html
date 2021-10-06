@@ -1,0 +1,175 @@
+<nav class="navbar navbar-expand-lg navbar-light bg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href=''><img  src="assets/images/mybank.png"style="height:90px"class="logo"></a>
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-home fa-2x"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-bell fa-2x"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-search fa-2x"></i></a>
+          </li>
+         
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#" (onClick)="logout()"> <i class="fas fa-sign-out-alt fa-2x"></i></a>
+          </li>
+        
+          
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+  <!-- <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0"> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" onclick="bank.balanceenquiery()">Balance</a>
+          </li> -->
+          <!-- <li class="nav-item"> -->
+            <!-- <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal"onclick="bank.fundtransfer()">
+              Fund Transfer
+            </button> -->
+          <!-- </li> -->
+       
+     
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#" onclick="bank.logout()"> <span id="user1">Logout</span></a>
+          </li>
+        
+          
+        </ul>
+        
+      </div>
+    </div> 
+  </nav> -->
+  <h1 style="text-align: center;color: black;padding-right: 2px;" class="ps-2 mt-5">Welcome<span id="user">{{user}}</span></h1> 
+  <div class="container large">
+    <div class="row" id="catset">
+       <div class="col-lg-2 col-sm-12 example catagories first ">
+        <a href="account"> <img src="assets/images/account.png"style=""class="image1 image"></a>
+          
+            <div class="text overlay">Account</div>
+         
+       </div>
+<div class="col-lg-2  col-sm-12 catagories second">
+  <a href="deposit"><img src="assets/images/depo.png"style=""class="image1"></a>
+         <div class="text overlay">Deposit</div>
+       
+       </div>
+       
+       <div class="col-lg-2 col-sm-12 catagories third"> 
+         <a href="withdraw"><img src="assets/images/loan.png"style=""class="image1"></a> 
+          <div class="text overlay">Withdraw</div>
+        </div>
+       <div class="col-lg-2 col-sm-12 catagories fourth">  
+        <a href="transaction"> <img src="assets/images/trans.png"style=""class="image1"></a>
+         <div class="text overlay">Transaction</div>
+        </div> 
+       
+       <div class="col-lg-2 col-sm-12 catagories fourth"> 
+        <a routerLink=""> <img src="assets/images/pay.png"style=""class="image1"></a>
+          <div class="text overlay">Bill Pay</div>
+        </div> 
+       
+    </div>
+  </div>
+  <!---------------------- mobile view-------------------------- -->
+
+
+  <div class="container mobileShow">
+  <div class="row" id="catset">
+    <div class="col-6 catagories third"> 
+      <a href="account">  <img src="assets/images/account.png"style=""class="image1"></a>
+      <div class="text overlay">Account</div>
+     
+  </div>
+  <div class="col-6 catagories third"> 
+    <a href="deposit">  <img src="assets/images/depo.png"style=""class="image1"></a>
+    <div class="text overlay">Deposit</div>
+   
+</div>
+</div>
+<div class="row" id="catset">
+  <div class="col-6 catagories third"> 
+    <a href="withdraw"> <img src="assets/images/loan.png"style=""class="image1"></a>
+    <div class="text overlay">Withdraw</div>
+    </div>
+    <div class="col-6 catagories third"> 
+      <a href="transaction">   <img src="assets/images/trans.png"style=""class="image1"></a>
+      <div class="text overlay">Transactions</div>
+</div>
+</div>
+<div class="row" id="catset">
+  <div class="col-6 catagories third"> 
+    <a href="bill"> <img src="assets/images/pay.png"style=""class="image1"></a>
+    <div class="text overlay">Bill Pay</div>
+    </div>
+  
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Fund Transfer</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <input type="text" id="toacno" class="form-control mb-2"placeholder="Accountnumber">
+            <input type="password" id="pass" class="form-control mb-2"placeholder="password">
+            <input type="text" id="amt" class="form-control"placeholder="Amount">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary"onclick="bank.fundtransfer()">proceed</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="contianer">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-lg-6 col-sm-12  iconset">
+  
+    <i class="fab fa-facebook fa-2x me-3"></i>
+    <i class="fab fa-twitter fa-2x me-3"></i>
+    <i class="fab fa-whatsapp fa-2x me-3"></i>
+    <i class="fas fa-print fa-2x me-3"></i>
+    <i class="fas fa-share-alt fa-2x"></i>
+    <p class="mt-2 mb-2">© 2021 union Bank Limited</p>
+    <p>Site best viewed in IE9+, Firefox 3.5+, Chrome 3+, Safari 5.0+ at 1024 x 768 pixels resolution</p>
+  </div>
+    <div class="col-3"></div>
+  </div>
+    </div>
+  </footer>

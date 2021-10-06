@@ -1,0 +1,84 @@
+<nav class="navbar navbar-expand-lg navbar-light bg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href=''><img  src="assets/images/mybank.png"style="height:90px" class="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse nav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"></a>
+          </li>
+        
+          
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+<div class="container">
+<div class="row indexset1">
+ 
+    <h1 class="acnt">create new account</h1>
+    
+     <div class="col-lg-6 col-sm-12"> 
+      <img  src="assets/images/regi.jpg" class="regiimg img-fluid rounded mx-auto d-block">
+     </div>
+       
+           <div class="col-lg-6 col-sm-12">
+
+            <form [formGroup]="registerForm"(ngSubmit)="register()">
+              <div class="mb-3 mt-2">
+                 <input type="text" placeholder="Name" name ="uname1"id="uname" formControlName="uname"class="mb-2 text1"style="height: 38px; width:240px;">
+                  </div>
+                  <div *ngIf="(this.registerForm.get('uname')?.touched||this.registerForm.get('uname')?.dirty)&&this.registerForm.get('uname')?.errors" class="text-danger">invalid user</div>
+                   <div class="mb-3">
+                 <input type="text" placeholder="Account number" name="acno1" id="acno" formControlName="acno" class="mb-2 text1"style="height: 38px; width:240px;">
+                 </div>
+                 <div *ngIf="(this.registerForm.get('acno')?.touched||this.registerForm.get('acno')?.dirty)&&this.registerForm.get('acno')?.errors" class="text-danger">invalid Account 
+                   number
+                 </div>
+                 <div class="mb-3">
+                    <input type="text" placeholder="Phone number" name ="phno1"id="phno" formControlName="phno"class="mb-2 text1"style="height: 38px; width:240px;">
+                    </div>
+                    <div *ngIf="(this.registerForm.get('phno')?.touched||this.registerForm.get('phno')?.dirty)&&this.registerForm.get('phno')?.errors" class="text-danger">invalid phone Number</div>
+                 <div class="mb-3">
+                 <input type="number" placeholder="Deposit" name="bal1" id="bal" formControlName="bal"class="mb-2 text1 "style="height: 38px; width:240px;">
+                 </div>
+                 <div class="mb-3">
+                 <input type="password" placeholder="Password" name="pwd1" id="pwd" formControlName="pwd"class="mb-2 text1"style="height: 38px; width:240px;">
+                 </div>
+                 <div *ngIf="(this.registerForm.get('pwd')?.touched||this.registerForm.get('pwd')?.dirty)&&this.registerForm.get('pwd')?.errors" class="text-danger">invalid Password</div>
+                 <button type="submit" class="mb-3 create">Create Account</button>
+            </form>
+           </div>
+         
+<!--           
+             <div class="col-3">
+
+             </div> -->
+        
+</div>
+
+</div> 
+
+<footer class="footer">
+  <div class="contianer">
+<div class="row">
+  <div class="col-3"></div>
+  <div class="col-lg-6 col-sm-12  iconset">
+
+  <i class="fab fa-facebook fa-2x me-3"></i>
+  <i class="fab fa-twitter fa-2x me-3"></i>
+  <i class="fab fa-whatsapp fa-2x me-3"></i>
+  <i class="fas fa-print fa-2x me-3"></i>
+  <i class="fas fa-share-alt fa-2x"></i>
+  <p class="mt-2 mb-2">© 2021 union Bank Limited</p>
+  <p>Site best viewed in IE9+, Firefox 3.5+, Chrome 3+, Safari 5.0+ at 1024 x 768 pixels resolution</p>
+</div>
+  <div class="col-3"></div>
+</div>
+  </div>
+</footer>

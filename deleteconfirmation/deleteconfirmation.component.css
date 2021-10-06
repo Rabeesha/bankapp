@@ -1,0 +1,50 @@
+.delete-btn{
+    padding-top: 5px;
+/* width: 36%; */
+width:18%;
+
+color: white;
+border-radius: 15px;
+padding-bottom: 5px;
+background-color: #dd1a32;
+border: none;
+font-size: 10px;
+float: right;
+margin-bottom: 0px!important;
+}
+.cancel-btn{
+    padding-top: 5px;
+    /* width: 36%; */
+    width:18%; 
+    color: white;
+    border-radius: 15px;
+    padding-bottom: 5px;
+    border: none;
+    font-size: 10px;
+    float: right;
+    margin-bottom: 0px!important;  
+}
+.msg-boxdiv{
+    position: absolute;
+     top: -159px; 
+    right: 50px; 
+    background-color:#e9e9e9;
+    padding: 15px;
+}
+.msg-box{
+    position: relative;
+}
+@media only screen and (max-width: 320px) {
+    .cancel-btn{
+        font-size: 8px;
+        width:23%
+    }  
+    .delete-btn{
+        font-size: 8px;
+        width:23%
+    } 
+    .msg-boxdiv{
+        font-size: 9px;
+        top: -109px;
+    }
+}

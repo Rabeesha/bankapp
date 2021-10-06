@@ -1,0 +1,17 @@
+<!-- <div *ngIf="item">
+    <p> r u sure want to delt this accc {{item}}</p>
+    <button class="mb-5 depo me-4" (click)="delete()">delete</button>
+
+    <button class="mb-5 depo me-4" (click)="cancel()">delete</button>
+
+</div>   -->
+<div class="msg-box" *ngIf="item">
+    <div class="msg-boxdiv">
+        <p> Are you  sure want to delete this Account {{item}}?</p>
+    <button class="mb-5 cancel-btn me-4 btn-primary" (click)="cancel()">Cancel</button>
+    <button class="mb-5 delete-btn me-4" (click)="delete()">Delete</button>
+
+   
+    </div>
+ </div>
+ 
